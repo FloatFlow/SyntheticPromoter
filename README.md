@@ -33,8 +33,11 @@ For this model we attempted to optimize the stride and kernel size of the MaxPoo
 
 #### 1D DenseNet 
 Similar to the original DenseNet, only using 1D convolutions and max pooling. The major feature of DenseNet is the residual connections between every block. In addition, our version is not as deep, to prevent overfitting. 
+
 ![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/densenet_fig.PNG)
+
 We tuned the type of convolution and length of the stem block. 
+
 ![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/1ddense_roc.png)
 
 #### Hilbert CNN
