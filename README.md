@@ -33,7 +33,7 @@ For this model we attempted to optimize the stride and kernel size of the MaxPoo
 
 #### 1D DenseNet 
 Similar to the original DenseNet, only using 1D convolutions and max pooling. The major feature of DenseNet is the residual connections between every block. In addition, our version is not as deep, to prevent overfitting. 
-![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/densenet_fig.png)
+![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/densenet_fig.PNG)
 We tuned the type of convolution and length of the stem block. 
 ![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/1ddense_roc.png)
 
@@ -43,11 +43,11 @@ Finally, we tested a Hilbert CNN. The Hilbert curve is a space fitting curve tha
  It is worth noting that the original authors did 4-mer one-hot encoding, meaning every set of 4 unique nucleotides got converted to a vector 256 long. My testing did not discern any difference between 4-mer and 1-mer one-hot encoding, so I optimized this using 1-mer encoded vectors which results in 4 channels, as opposed to 256 channels per sample, which can dramatically increase storage requirements and computation time. 
 ![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/hilbert_curvetrunc.png)
 Yin et al. benchmarked a variety of space fitting curves on different datasets, and Hilbert always came out ahead. 
-![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/mappingstrats.png)
+![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/mappingstrats.PNG)
 The general architecture looks like this:
-![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/hilbertcnn.png)
+![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/hilbertcnn.PNG)
 With each computation block appears as follows:
-![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/hilbertcnn_residualblock.png)
+![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/hilbertcnn_residualblock.PNG)
 We played around with a variety of parameters, such as activations at the end of computation blocks, use of max pooling prior to the fully connected layers, and dropout. 
 ![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/hilbert_roc.png)
 #### Truncated Hilbert MobileNet
