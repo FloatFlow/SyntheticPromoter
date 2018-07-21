@@ -59,7 +59,9 @@ We played around with a variety of parameters, such as activations at the end of
 ![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/hilbert_roc.png)
 #### Truncated Hilbert MobileNet
 Very similar idea to the Hilbert CNN, just using a different architecture. In addition, we truncate most of the upper layers in order to reduce model complexity. Architecture from the original paper: 
-![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/mobilenet_fig.png)
+
+![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/mobilenet_fig.PNG)
+
 See ROC curves from above to see this model compared with the Hilbert-CNN. 
 
 ## Determination of Feature Co-occurance
@@ -67,11 +69,12 @@ See ROC curves from above to see this model compared with the Hilbert-CNN.
 Sequences were analyzed using distance metrics against known features in the JASPAR database. 
 We then determined which features co-occur with each other within a given sequence more frequently than expected.
 This is similar to determining whether two words occur in the same sentence more frequently than expected, given a corpus. 
-![alt text](https://github.com/FloatFlow/SyntheticPromoter/blob/master/readme_figures/feature_cooc.png)
+
 ## TO DO
 * Create ensemble model
 * Generate saliency examples
 * Show frequency of filters matching known important DNA sequences
+* Clean up statistical analysis
 
 ## Authors
 
